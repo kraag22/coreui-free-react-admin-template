@@ -1,32 +1,14 @@
 import React, { Component } from 'react';
-import { Bar, Line } from 'react-chartjs-2';
 import { Link } from 'react-router-dom';
 import {
-  Badge,
-  Button,
-  ButtonDropdown,
-  ButtonGroup,
-  ButtonToolbar,
   Card,
   CardBody,
-  CardFooter,
   CardHeader,
-  CardTitle,
   Col,
-  Dropdown,
-  DropdownItem,
-  DropdownMenu,
-  DropdownToggle,
-  Progress,
   Row,
   Table,
 } from 'reactstrap';
-
-import { CustomTooltips } from '@coreui/coreui-plugin-chartjs-custom-tooltips'
-import { getStyle, hexToRgba } from '@coreui/coreui/dist/js/coreui-utilities'
 import Charts from '../Charts'
-
-import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
 class Dashboard extends Component {
@@ -95,7 +77,7 @@ class Dashboard extends Component {
                   </tr>
                   </thead>
                   <tbody>
-                  {sortedEmployees.length == 0 && <tr><td colSpan="4" className="load-bar">Loading</td></tr>}
+                  {sortedEmployees.length === 0 && <tr><td colSpan="4" className="load-bar">Loading</td></tr>}
                   {sortedEmployees.map((employee, i) => {
                      return (<tr key={i}>
                       <td>
@@ -120,7 +102,7 @@ class Dashboard extends Component {
           </Col>
         </Row>
         <Row>
-          {this.props.employees.length == 0 && <div className="load-bar full-size">Loading</div>}
+          {this.props.employees.length === 0 && <div className="load-bar full-size">Loading</div>}
           {this.props.employees.length > 0 && <Charts employees={this.props.employees}/>}
         </Row>
       </div>

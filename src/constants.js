@@ -1,5 +1,3 @@
-'use strict'
-
 /**
  * Const to Dev Tools (Extension Google Chrome)
  */

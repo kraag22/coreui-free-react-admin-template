@@ -39,9 +39,9 @@ class AddUser extends Component {
   validate() {
     let errors = this.state.errors
 
-    errors.name = String(this.state.name).length == 0
-    errors.jobTitle = String(this.state.jobTitle).length == 0
-    errors.tenure = String(this.state.tenure).length == 0 || parseInt(this.state.tenure) != this.state.tenure
+    errors.name = String(this.state.name).length === 0
+    errors.jobTitle = String(this.state.jobTitle).length === 0
+    errors.tenure = String(this.state.tenure).length === 0 || String(parseInt(this.state.tenure, 10)) !== this.state.tenure
     errors.gender = String(this.state.gender) !== 'Male' && String(this.state.gender) !== 'Female'
 
     this.setState({'errors': errors})
