@@ -22,7 +22,15 @@ import DefaultAside from './DefaultAside';
 import DefaultFooter from './DefaultFooter';
 import DefaultHeader from './DefaultHeader';
 
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
+import { getEmployees } from '../../reducers/app/action-creators'
+
 class DefaultLayout extends Component {
+  componentDidMount () {
+    setTimeout(() => this.props.getEmployees(), 500)
+  }
+
   render() {
     return (
       <div className="app">
@@ -64,4 +72,5 @@ class DefaultLayout extends Component {
   }
 }
 
-export default DefaultLayout;
+const mapDispatchToProps = dispatch => bindActionCreators({ getEmployees }, dispatch)
+export default connect(null, mapDispatchToProps)(DefaultLayout)

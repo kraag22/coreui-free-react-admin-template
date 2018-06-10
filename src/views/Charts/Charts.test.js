@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Charts from './Charts';
+import {parseGender} from './Charts'
 
 jest.mock('react-chartjs-2', () => ({
   Line: () => null,
@@ -16,3 +17,7 @@ it('renders without crashing', () => {
   ReactDOM.render(<Charts />, div);
   ReactDOM.unmountComponentAtNode(div);
 });
+
+it('parses gender info', () => {
+  parseGender([])
+})

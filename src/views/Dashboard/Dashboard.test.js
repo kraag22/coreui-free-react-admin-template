@@ -1,6 +1,6 @@
-// import React from 'react';
-// import ReactDOM from 'react-dom';
-// import Dashboard from './Dashboard';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Dashboard from './Dashboard';
 // import { shallow } from 'enzyme'
 
 // jest.mock('react-chartjs-2', () => ({
@@ -18,4 +18,4 @@
 //   shallow(<Dashboard />);
 // });
 
-it('', () => {})
+// it('', () => {})
