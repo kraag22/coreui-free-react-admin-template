@@ -18,6 +18,7 @@ import { getEmployees } from '../../reducers/app/action-creators'
 
 class DefaultLayout extends Component {
   componentDidMount () {
+    // just simulate fetching data from some external source
     setTimeout(() => this.props.getEmployees(), 500)
   }
 

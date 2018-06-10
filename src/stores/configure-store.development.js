@@ -2,7 +2,6 @@ import { applyMiddleware, createStore } from 'redux'
 import { DEV_TOOLS } from '../constants'
 import globalReducers from '../reducers/root-reducers'
 import promise from 'redux-promise'
-// import multi from 'redux-multi'
 import thunk from 'redux-thunk'
 import logger from 'redux-logger'
 

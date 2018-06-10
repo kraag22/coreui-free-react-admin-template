@@ -130,5 +130,3 @@ class AddUser extends Component {
 
 const mapDispatchToProps = dispatch => bindActionCreators({ addEmployee }, dispatch)
 export default connect(null, mapDispatchToProps)(AddUser)
-
-// export default AddUser;
